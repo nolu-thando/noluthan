@@ -1,0 +1,130 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link waves-light"  mdbWavesEffect >Calculator</a>
+        </li>
+  
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            More <span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+          </div>
+        </li>
+  
+      </ul>
+      <!-- Links -->
+  
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link">
+            <mdb-icon fab icon="twitter"></mdb-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <mdb-icon fab icon="google-plus"></mdb-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <div class="btn-group" mdbDropdown>
+              <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+              <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="divider dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+  <!--/.Navbar-->
+
+  <div class="row">
+    <div class="col-md-4 mx-auto my-5">
+      <!--Card-->
+      <mdb-card dark="true">
+  
+        <!--Card image-->
+        <div class="view overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/.Card image-->
+  
+        <!--Card content-->
+        <mdb-card-body class="elegant-color white-text">
+          <!--Text-->
+  <!-- Default form login -->
+<form class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">Quick Calculations</p>
+  
+    <!-- Income -->
+    <label>Income</label>
+    <mdb-card>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h5>Add Your Income</h5>
+            <h6 class="text-muted mb-2">Panel subtitle</h6>
+          </mdb-card-title>
+          <mdb-card-text>
+            Some quick example text to build on the panel title and make up the bulk of the panel's content.
+          </mdb-card-text>
+          <mdb-card-footer class="text-muted">2 days ago</mdb-card-footer>
+        </mdb-card-body>
+      </mdb-card>
+  <br>
+    <!-- Expense -->
+    <label>Expense</label>
+    <mdb-card>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h5>Panel title</h5>
+            <h6 class="text-muted mb-2">Panel subtitle</h6>
+          </mdb-card-title>
+          <mdb-card-text>
+            Some quick example text to build on the panel title and make up the bulk of the panel's content.
+          </mdb-card-text>
+          <mdb-card-footer class="text-muted">2 days ago</mdb-card-footer>
+        </mdb-card-body>
+      </mdb-card>
+    <!--  button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Calculate</button>
+  
+    
+  </form>
+        </mdb-card-body>
+        <!--/.Card content-->
+      </mdb-card>
+      <!--/.Card-->
+    </div>
+  </div>
+
+  <ng-template >
+    <app-calculator></app-calculator>
+  </ng-template>
+
+  
