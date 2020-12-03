@@ -1,45 +1,66 @@
+<!-- Default form register -->
+<form class="text-center border border-light p-5">
 
-<button type="button" mdbBtn color="primary" class="relative waves-light" (click)="basicModal.show()" mdbWavesEffect>Launch demo modal</button>
+  <p class="h4 mb-4">Sign up</p>
 
-<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-primary" role="document">
-  <div class="modal-dialog" role="document">
-     <!--Content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close pull-right" data-dismiss="modal"  aria-label="Close" (click)="basicModal.hide()">
-          <span aria-hidden="true"class="white-text">×</span>
-        </button>
-        <h4 class="modal-title w-100 white-text " >Sign Up</h4>
-      
-     
+  <div class="form-row mb-4">
+    <div class="col">
+      <!-- First name -->
+      <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
     </div>
-      <div class="modal-body">
-          <div class="md-form">
-              <i class="fas fa-user prefix grey-text"></i>
-              <input mdbInput type="text" name="name"  [(ngModel)]= "name" class="form-control">
-              <label for="form1" class="">Name</label>
-            </div>
-        <div class="md-form">
-                <i class="fas fa-envelope prefix grey-text"></i>
-            <input mdbInput type="email" name="email"  [(ngModel)]= "email" class="form-control">
-            <label for="form1" class="">Email</label>
-          </div>
-          <div class="md-form">
-            <i class="fas fa-lock prefix grey-text"></i>
-            <input mdbInput type="password" name="password"  [(ngModel)]= "password" class="form-control">
-            <label for="form1" class="">Password</label>
-          </div>
-      </div>
-      <div class="modal-footer">
-          <div class="options text-right">
-            <p class="pt-1">Already have an account? <a href="/login" class="blue-text">Log In</a></p>
-          </div>
-          <button type="button"mdbBtn color="primary" class="waves-light" aria-label="Close"  data-dismiss="modal">Sign Up</button>
-        </div>
-      </div>
-        
-    <!--/.Content-->
+    <div class="col">
+      <!-- Last name -->
+      <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
     </div>
   </div>
-  
+
+  <!-- E-mail -->
+  <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Password -->
+  <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+    At least 8 characters and 1 digit
+  </small>
+
+  <!-- Phone number -->
+  <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+  <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+    Optional - for two-step authentication
+  </small>
+
+  <!-- Newsletter -->
+  <div class="row">
+    <div class="col-md-6 mx-auto d-flex justify-content-center">
+      <mdb-checkbox [default]="true">Subscribe to our newsletter</mdb-checkbox>
+    </div>
+  </div>
+
+  <!-- Sign up button -->
+  <button mdbBtn color="info" block="true" class="my-4" type="submit">Sign in</button>
+
+  <!-- Social register -->
+  <p>or sign up with:</p>
+
+  <a type="button" class="light-blue-text mx-2">
+    <mdb-icon fab icon="facebook"></mdb-icon>
+  </a>
+  <a type="button" class="light-blue-text mx-2">
+    <mdb-icon fab icon="twitter"></mdb-icon>
+  </a>
+  <a type="button" class="light-blue-text mx-2">
+    <mdb-icon fab icon="linkedin"></mdb-icon>
+  </a>
+  <a type="button" class="light-blue-text mx-2">
+    <mdb-icon fab icon="github"></mdb-icon>
+  </a>
+
+  <hr>
+
+  <!-- Terms of service -->
+  <p>By clicking
+    <em>Sign up</em> you agree to our
+    <a href="" target="_blank">terms of service</a></p>
+
+</form>
+<!-- Default form register -->
