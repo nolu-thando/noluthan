@@ -6,16 +6,18 @@ import {HttpClientModule} from '@angular/common/http'
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { BudgetListComponent } from './budget-list/budget-list.component';
+import { AddItemsComponent } from './add-items/add-items.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RegistrationComponent,
     CalculatorComponent,
+    BudgetListComponent,
+    AddItemsComponent
 
   ],
   imports: [

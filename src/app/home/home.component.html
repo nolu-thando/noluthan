@@ -64,67 +64,20 @@
     <div class="col-md-4 mx-auto my-5">
       <!--Card-->
       <mdb-card dark="true">
-  
-        <!--Card image-->
-        <div class="view overlay waves-light" mdbWavesEffect>
-          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg"></mdb-card-img>
-          <a>
-            <div class="mask rgba-white-slight"></div>
-          </a>
-        </div>
-        <!--/.Card image-->
-  
         <!--Card content-->
         <mdb-card-body class="elegant-color white-text">
           <!--Text-->
   <!-- Default form login -->
 <form class="text-center border border-light p-5">
-
+  <section class="total-section" style="height:100px">
+    <h2 class= "green" >1500</h2>
+ 
     <p class="h4 mb-4">Quick Calculations</p>
-  
-    <!-- Income -->
-    <label>Income</label>
-    <mdb-card>
-        <mdb-card-body>
-          <mdb-card-title>
-            <h5>Add Your Income</h5>
-            <h6 class="text-muted mb-2">Panel subtitle</h6>
-          </mdb-card-title>
-          <mdb-card-text>
-            Some quick example text to build on the panel title and make up the bulk of the panel's content.
-          </mdb-card-text>
-          <mdb-card-footer class="text-muted">2 days ago</mdb-card-footer>
-        </mdb-card-body>
-      </mdb-card>
-  <br>
-    <!-- Expense -->
-    <label>Expense</label>
-    <mdb-card>
-        <mdb-card-body>
-          <mdb-card-title>
-            <h5>Panel title</h5>
-            <h6 class="text-muted mb-2">Panel subtitle</h6>
-          </mdb-card-title>
-          <mdb-card-text>
-            Some quick example text to build on the panel title and make up the bulk of the panel's content.
-          </mdb-card-text>
-          <mdb-card-footer class="text-muted">2 days ago</mdb-card-footer>
-        </mdb-card-body>
-      </mdb-card>
-    <!--  button -->
-    <button mdbBtn color="info" block="true" class="my-4" type="submit">Calculate</button>
-  
-    
-  </form>
-        </mdb-card-body>
-        <!--/.Card content-->
-      </mdb-card>
-      <!--/.Card-->
-    </div>
-  </div>
-
-  <ng-template >
-    <app-calculator></app-calculator>
-  </ng-template>
-
-  
+   </section>
+    <app-add-items></app-add-items>
+</form>
+</mdb-card-body>
+</mdb-card>
+<hr>
+<app-budget-list></app-budget-list>
+ 
