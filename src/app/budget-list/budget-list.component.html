@@ -1,36 +1,44 @@
-<section class="budget-items-section">
-        <div class="budget-items-container">
-      
-          <div class="income-column text-muted">
-            <h1>Income</h1>
-      
-            <div class="budget-items">
-              <!-- <div *ngFor="let item of budgetItems"> -->
-                <!-- <app-budget-item-card
-                  *ngIf="item.amount >= 0"
-                  [item]="item"
-                  (xButtonClick)="onDeleteButtonClicked(item)"
-                  (cardClick)="onCardClicked(item)"
-                  style="display:block; margin-bottom: 20px"></app-budget-item-card> -->
-              <!-- </div> -->
-            </div>
+<!-- Editable table -->
+<div class="card">
+        <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h3>
+        <div class="card-body">
+          <div id="table" class="table-editable">
+            <table class="table table-bordered table-responsive-md table-striped text-center">
+              <tr>
+                <th class="text-center">Income</th>
+                <th class="text-center">Expense</th>
+              </tr>
+              <tr *ngFor="let person of personList; let id = index">
+                <td>
+                  <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true"></span>
+                </td>
+                <td>
+                  <span contenteditable="true" (keyup)="changeValue(id, 'age', $event)" (blur)="updateList(id, 'age', $event)"></span>
+                </td>
+               
+                <td>
+                  <span class="table-up">
+                    <a class="indigo-text">
+                      <mdb-icon fas icon="long-arrow-alt-up"></mdb-icon>
+                    </a>
+                  </span>
+                  <span class="table-down">
+                    <a class="indigo-text">
+                      <mdb-icon fas icon="long-arrow-alt-down"></mdb-icon>
+                    </a>
+                  </span>
+                </td>
+                <td>
+                  <span class="table-remove">
+                    <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="delete(id)">Delete</button>
+                  </span>
+                </td>
+              </tr>
+            </table>
           </div>
-      
-      
-          <div class="expenses-column text-muted">
-            <h1>Expenses</h1>
-            
-            <div class="budget-items">
-                <!-- <div *ngFor="let item of budgetItems">
-                  <app-budget-item-card
-                    *ngIf="item.amount < 0"
-                    [item]="item"
-                    (xButtonClick)="onDeleteButtonClicked(item)"
-                    (cardClick)="onCardClicked(item)"
-                    style="display:block; margin-bottom: 20px"></app-budget-item-card>
-                </div> -->
-              </div>
-          </div>
-          
         </div>
-      </section>
+      </div>
+      <!-- Editable table -->
+
+
+      
