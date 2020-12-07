@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculatorService} from './../calculator.service'
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-add-items',
@@ -6,16 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-items.component.scss']
 })
 export class AddItemsComponent implements OnInit {
+
   
-  constructor() { }
+  constructor(private calculatorService: CalculatorService){}
 
   ngOnInit() {
   }
-  
-  // onAdd(form:NgForm) { //btn pressed
-  //   this.formSubmit.emit(form.value)
-  //   form.reset()
-    
-  // }
-
+  add(){
+    this.calculatorService.sendClickEvent();
+    }
+ 
 }

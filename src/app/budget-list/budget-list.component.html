@@ -1,44 +1,29 @@
-<!-- Editable table -->
-<div class="card">
-        <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h3>
-        <div class="card-body">
-          <div id="table" class="table-editable">
-            <table class="table table-bordered table-responsive-md table-striped text-center">
-              <tr>
-                <th class="text-center" *ngFor="let expense of salary">Income  {{ amount + discription }}</th>
-                <th class="text-center">Expense</th>
-              </tr>
-              <tr *ngFor="let person of personList; let id = index">
-                <td>
-                  <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true"></span>
-                </td>
-                <td>
-                  <span contenteditable="true" (keyup)="changeValue(id, 'age', $event)" (blur)="updateList(id, 'age', $event)"></span>
-                </td>
-               
-                <td>
-                  <span class="table-up">
-                    <a class="indigo-text">
-                      <mdb-icon fas icon="long-arrow-alt-up"></mdb-icon>
-                    </a>
-                  </span>
-                  <span class="table-down">
-                    <a class="indigo-text">
-                      <mdb-icon fas icon="long-arrow-alt-down"></mdb-icon>
-                    </a>
-                  </span>
-                </td>
-                <td>
-                  <span class="table-remove">
-                    <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="delete(id)">Delete</button>
-                  </span>
-                </td>
-              </tr>
-            </table>
-          </div>
+    <!-- Editable table -->
+    <div class="card">
+      <h3 class="card-header text-center text-muted font-weight-bold text-uppercase py-4">Expense and Income Table</h3>
+      <div class="card-body">
+        <div id="table" class="table-editable">
+          
+          <table class="table table-bordered table-responsive-md table-striped text-center">
+            <tr>
+              <th class="text-center">Income </th>
+              <th class="text-center">Expense</th>
+            </tr>
+            <tr *ngFor="let person of personList; let id = index">
+              <td>
+                <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true">{{person.income}}</span>
+              </td>
+              <td>
+                <span contenteditable="true" (keyup)="changeValue(id, 'age', $event)" (blur)="updateList(id, 'age', $event)">{{person.expense}}</span>
+              </td>
+              <td>
+                <span class="table-remove">
+                  <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="delete(id)">Delete</button>
+                </span>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
-      <!-- Editable table -->
-
-
-      
+    </div>
+    <!-- Editable table -->
