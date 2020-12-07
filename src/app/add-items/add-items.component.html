@@ -9,4 +9,33 @@
             <button type="submit" mdbBtn color="danger" class="mt-0" (click)="add()" >Add</button>
           </form>
           <br>
-          (
+          
+
+          <!-- Editable table -->
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-muted text-uppercase py-4">Income and Expense Table</h3>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <tr>
+          <th class="text-center"  >Income</th>
+          <th class="text-center" >Expense</th>
+        </tr>
+        <tr *ngFor="let person of personList; let id = index">
+          <td>
+            <span (keyup)="changeValue(income, expense,'description', $event)" (blur)="updateList(income, expense,'description', $event)" contenteditable="true">{{person.income}}</span>
+          </td>
+          <td>
+            <span contenteditable="true" (keyup)="changeValue(income, expense,'description', $event)" (blur)="updateList(income, expense,'description', $event)">{{person.expense}}</span>
+          </td>
+          <td>
+            <span class="table-remove">
+              <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)">Remove</button>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Editable table -->

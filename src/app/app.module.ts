@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { BudgetListComponent } from './budget-list/budget-list.component';
 import { AddItemsComponent } from './add-items/add-items.component';
+import { ItemCardComponent } from './item-card/item-card.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AddItemsComponent } from './add-items/add-items.component';
     HomeComponent,
     CalculatorComponent,
     BudgetListComponent,
-    AddItemsComponent
+    AddItemsComponent,
+    ItemCardComponent
 
   ],
   imports: [
