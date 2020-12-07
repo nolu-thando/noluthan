@@ -5,7 +5,7 @@
           <div id="table" class="table-editable">
             <table class="table table-bordered table-responsive-md table-striped text-center">
               <tr>
-                <th class="text-center">Income</th>
+                <th class="text-center" *ngFor="let expense of salary">Income  {{ amount + discription }}</th>
                 <th class="text-center">Expense</th>
               </tr>
               <tr *ngFor="let person of personList; let id = index">
