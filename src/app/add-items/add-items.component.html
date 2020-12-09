@@ -17,9 +17,9 @@
   <div class="card-body">
     <div id="table" class="table-editable">
       <table class="table table-bordered table-responsive-md table-striped text-center">
-        <tr>
-          <th class="text-center"  >Income</th>
-          <th class="text-center" >Expense</th>
+        <tr  *ngFor="let person of personList">
+          <th class="text-center"  >Income {{personList.income}}</th>
+          <th class="text-center" >Expense {{personList.expense}}</th>
         </tr>
         <tr *ngFor="let person of personList; let id = index">
           <td>
@@ -30,7 +30,7 @@
           </td>
           <td>
             <span class="table-remove">
-              <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)">Remove</button>
+              <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)">Delete</button>
             </span>
           </td>
         </tr>
