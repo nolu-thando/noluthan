@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { CalculatorService } from '../calculator.service';
-import { Models } from '../models';
+import { Models } from "../Models.1";
 
 @Component({
   selector: 'app-add-items',
@@ -10,28 +10,23 @@ import { Models } from '../models';
 
 export class AddItemsComponent {
   income: Models;
-  expense: number;
+  expense: Models;
   description: String;
   dateAdded:Date;
   amount: number;
-  
-  
- 
-// set local storage
- 
-  constructor(
-    private calculatorService: CalculatorService
-    ){}
-  ngOnInit(): void {
-   
-    this.income = this.calculatorService.addIncome(newIncome);
-
-  }
-
-  editField: string;
   personList: Array<any> = [];
-
+  editField: string;
   awaitingPersonList: Array<any> = [];
+
+
+
+  constructor( private calculatorService: CalculatorService ){}  
+
+  ngOnInit() { }
+ 
+
+  
+  
 
   updateList(income: number, expense: number, event: any) {
     const editField = event.target.textContent;
@@ -39,19 +34,20 @@ export class AddItemsComponent {
   }
 
   remove(id: any) {
-    this.awaitingPersonList.push(this.personList[id]);
+    this.personList.push(this.personList[id]);
     this.personList.splice(id, 1);
+   // localStorage.removeItem("id");
   }
 
   add() {
     this.personList.push({ income: this.income, expense: this.expense, description: this.description, dateAdded: this.dateAdded});
-    // if (this.personList.length > 0) {
-    //   const person = this.personList[0];
-    //   this.personList.push(person);
-    //   this.personList.splice(0, 1);
-    //   localStorage.setItem('personList',JSON.stringify(this.personList))
+    if (this.personList.length > 0) {
+      const person = this.personList[0];
+      this.personList.push(person);
+      this.personList.splice(0, 1);
+      localStorage.setItem('personList',JSON.stringify(this.personList))
       console.log(this.personList);
-    // }
+    }
   }
 
   changeValue(id: number, property: string, event: any) {
@@ -61,4 +57,3 @@ export class AddItemsComponent {
   }
 
 
-  

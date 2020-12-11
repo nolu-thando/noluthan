@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CalculatorService {
+  amount: any;
 
   constructor() { 
   console.log('BudgetService Works');
@@ -18,6 +20,7 @@ export class CalculatorService {
     return expenses;
   }
   addIncome(newIncome) {
+  
     let income = JSON.parse(localStorage.getItem('income'));
     income.push(newIncome);
     localStorage.setItem('income', JSON.stringify(income));

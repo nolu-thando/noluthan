@@ -23,10 +23,10 @@
         </tr>
         <tr *ngFor="let person of personList; let id = index">
           <td>
-            <span (keyup)="changeValue(income, expense,'description', $event)" (blur)="updateList(income, expense,'description', $event)" contenteditable="true">{{person.income}}</span>
+            <span (keyup)="changeValue(income, expense,'description', $event)" (blur)="updateList(income, expense,'description', $event)" contenteditable="true"></span>
           </td>
           <td>
-            <span contenteditable="true" (keyup)="changeValue(income, expense,'description', $event)" (blur)="updateList(income, expense,'description', $event)">{{person.expense}}</span>
+            <span contenteditable="true" (keyup)="changeValue(income, expense,'description', $event)" (blur)="updateList(income, expense,'description', $event)"></span>
           </td>
           <td>
             <span class="table-remove">
